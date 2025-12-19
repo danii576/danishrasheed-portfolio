@@ -1,0 +1,104 @@
+/* Footer container */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(to right, #4da6ff, #0059b3); /* light to dark blue */
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-top: 740px;
+}
+
+/* Copyright text */
+.footer p {
+  flex: 1 1 100%;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+/* Social links */
+.footer .socail-links {
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  gap: 1.5rem;
+}
+
+.footer .socail-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s;
+}
+
+.footer .socail-links li a:hover {
+  color: #ffd633; /* highlight on hover */
+}
+
+/* Contact links */
+.footer .contact ul {
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  gap: 1.5rem;
+}
+
+.footer .contact ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s;
+}
+
+.footer .contact ul li a:hover {
+  color: #ffd633;
+}
+
+/* Icons spacing */
+.footer i {
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+/* Logo styling */
+.footer span img {
+  height: 50px;
+  width: auto;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .footer .socail-links,
+  .footer .contact ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer span img {
+    margin-top: 1rem;
+  }
+}

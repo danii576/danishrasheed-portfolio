@@ -1,0 +1,89 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  background: linear-gradient(to right, #4da6ff, #0059b3); /* Light blue to dark blue */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  border-radius: 20px;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Navbar links */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffd633; /* Highlight on hover */
+}
+
+/* Language button container */
+.navbar-lang {
+  display: flex;
+  align-items: center;
+}
+
+/* PrimeNG button styling */
+.lang-button {
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+  border-radius: 4px !important;
+  padding: 0.3rem 0.8rem !important;
+  font-size: 0.9rem !important;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-button:hover {
+  background-color: white !important;
+  color: #0059b3 !important;
+}
+
+/* Optional responsive adjustment */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-lang {
+    margin-top: 0.5rem;
+  }
+}
