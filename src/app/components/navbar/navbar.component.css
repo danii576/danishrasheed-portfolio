@@ -22,6 +22,10 @@
   width: auto;
   cursor: pointer;
 }
+.navbar-logo img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
 
 /* Navbar links */
 .navbar ul {
@@ -67,6 +71,45 @@
 .lang-button:hover {
   background-color: white !important;
   color: #0059b3 !important;
+}
+
+/* Ensure all links are positioned relative for the underline */
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Permanent underline for active link */
+.navbar ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* distance from text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* thickness of the line */
+  background-color: #ffd633; /* line color for active page */
+  border-radius: 2px;
+}
+
+/* Optional: keep hover animation for other links */
+.navbar ul li a:not(.active):hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffd633;
+  border-radius: 2px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar ul li a:not(.active):hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /* Optional responsive adjustment */

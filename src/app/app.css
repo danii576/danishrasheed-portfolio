@@ -1,0 +1,11 @@
+/* Make the root container a column flexbox */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 98vh; /* full viewport height */
+}
+
+/* Main content grows to fill space */
+.app-content {
+  flex: 1; /* takes all available space */
+}
