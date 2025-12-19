@@ -1,0 +1,77 @@
+/* ===== Container ===== */
+.hobby-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+}
+
+/* ===== Title ===== */
+.hobby-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* ===== Intro Paragraph ===== */
+.hobby-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+/* ===== Section / List Wrapper ===== */
+.hobby-container section {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== Unordered List ===== */
+.hobby-container ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===== Individual Hobby Items ===== */
+.hobby-container li {
+  background: #f9f9f9; /* subtle card */
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  margin-top: 5px;
+}
+
+/* Hover effect - lift + shadow */
+.hobby-container li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hobby-container ul {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-container h1 {
+    font-size: 2rem;
+  }
+
+  .hobby-container p {
+    font-size: 1rem;
+  }
+}
