@@ -112,25 +112,59 @@
   left: 0;
 }
 
+/* Menu Toggle Button (Mobile Only) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
 /* Optional responsive adjustment */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
+    padding: 0 1.5rem;
+    position: relative;
+    border-radius: 15px; /* Slightly smaller radius for mobile */
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   .navbar ul {
+    display: none; /* Hide by default on mobile */
     flex-direction: column;
-    width: 100%;
-    align-items: center;
+    position: absolute;
+    top: 65px; /* Below navbar */
+    right: 0;
+    width: 200px;
+    background: linear-gradient(to bottom, #0059b3, #004080);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .navbar ul.open {
+    display: flex; /* Show when 'open' class is present */
   }
 
   .navbar ul li {
-    margin: 0.5rem 0;
+    margin: 0.8rem 0;
+    width: 100%;
+    text-align: center;
   }
 
-  .navbar-lang {
-    margin-top: 0.5rem;
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar ul li a.active::after {
+    bottom: -2px;
   }
 }

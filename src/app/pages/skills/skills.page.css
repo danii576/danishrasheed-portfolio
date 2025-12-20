@@ -70,3 +70,14 @@
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}

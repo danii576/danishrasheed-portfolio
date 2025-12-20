@@ -10,9 +10,16 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
   imports: [CommonModule, ButtonModule, RouterLink, RouterLinkActive],
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
+  isMenuOpen: boolean = false;
+
+  constructor(private router: Router) { }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   goToHome() {
+    this.isMenuOpen = false;
     this.router.navigate(['/']);
   }
 }

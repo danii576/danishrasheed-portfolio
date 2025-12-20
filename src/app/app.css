@@ -2,10 +2,13 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 98vh; /* full viewport height */
+  min-height: 100vh;
+  /* full viewport height */
+  overflow-x: hidden;
 }
 
 /* Main content grows to fill space */
 .app-content {
-  flex: 1; /* takes all available space */
+  flex: 1;
+  /* takes all available space */
 }

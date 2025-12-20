@@ -2,20 +2,25 @@
   <div class="navbar-logo">
     <img src="/images/1.jpg" (click)="goToHome()" alt="Logo" />
   </div>
-  <ul>
+
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <i class="pi" [ngClass]="isMenuOpen ? 'pi-times' : 'pi-bars'"></i>
+  </button>
+
+  <ul [class.open]="isMenuOpen">
     <li>
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="isMenuOpen = false">
         Home
       </a>
     </li>
     <li>
-      <a routerLink="skills" routerLinkActive="active">Skills</a>
+      <a routerLink="/skills" routerLinkActive="active" (click)="isMenuOpen = false">Skills</a>
     </li>
     <li>
-      <a routerLink="contact" routerLinkActive="active">Contact</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contact</a>
     </li>
     <li>
-      <a routerLink="hobby" routerLinkActive="active">Hobby</a>
+      <a routerLink="/hobby" routerLinkActive="active" (click)="isMenuOpen = false">Hobby</a>
     </li>
   </ul>
 </div>
