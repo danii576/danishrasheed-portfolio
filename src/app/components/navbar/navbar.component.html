@@ -1,9 +1,13 @@
 <div class="navbar">
   <div class="navbar-logo">
-    <img src="/images/1.jpg" alt="logo" />
+    <img src="/images/1.jpg" (click)="goToHome()" alt="logo" />
   </div>
   <ul>
-    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+    </li>
     <li><a routerLink="skills" routerLinkActive="active">Skills</a></li>
     <li><a routerLink="contact" routerLinkActive="active">Contact</a></li>
     <li><a routerLink="hobby" routerLinkActive="active">Hobby</a></li>
